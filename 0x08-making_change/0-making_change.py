@@ -10,21 +10,15 @@ def makeChange(coins, total):
     """
     num_change = 0
     value_add = 0
-    coins.sort()
-    if total == 0 or total < 0:
+    coins.sort(reverse=True)
+    if total <= 0:
         return 0
     for values in coins:
-        maxVal = coins[-1]
-        if total >= maxVal:
-            value_add = int(total / maxVal)
-            total = total - (value_add * maxVal)
+        if total >= values:
+            value_add = int(total / values)
+            total = total - (value_add * values)
             num_change = num_change + value_add
-            coins.pop(-1)
-            if (total % maxVal) == 0:
+            if total == 0:
                 return num_change
-        else:
-            coins.pop(-1)
-            if coins == []:
-                return -1
 
     return -1
