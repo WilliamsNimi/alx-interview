@@ -26,7 +26,5 @@ def makeChange(coins, total):
             coins.pop(-1)
             if coins == []:
                 return -1
-            if (total % maxVal) != 0:
-                return -1
 
     return -1
