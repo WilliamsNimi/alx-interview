@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+""" Greedy Algorithm change module"""
+
+
 def makeChange(coins, total):
     """ A Greedy algorithm to make change
     @coins: currency denomination
