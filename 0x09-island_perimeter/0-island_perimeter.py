@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """ Island perimeter module """
-from typing import List
-def island_perimeter(grid: List) -> int:
+def island_perimeter(grid) -> int:
     """ Calculate the perimeter of an island """
     count = 0
     for i in grid:
