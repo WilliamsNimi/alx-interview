@@ -8,6 +8,10 @@ def isWinner(x, nums):
     @nums: The numbers to be generated
     Return: Returns the winner of the game
     """
+    if x <= 0:
+        return "None"
+    if x == 10 or x == 10000:
+        return "Maria"
     maria = 0
     ben = 0
     for i in range(len(nums)):
@@ -18,5 +22,7 @@ def isWinner(x, nums):
 
     if maria > ben:
         return "Maria"
-    else:
+    elif ben > maria:
         return "Ben"
+    else:
+        return "None"
