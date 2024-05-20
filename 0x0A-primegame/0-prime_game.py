@@ -15,9 +15,7 @@ def isWinner(x, nums):
     maria = 0
     ben = 0
     for i in range(len(nums)):
-        if len(nums) <= 1:
-            continue
-        elif nums[i] % 2 == 0:
+        if nums[i] % 2 == 0:
             maria += 1
         else:
             ben += 1
