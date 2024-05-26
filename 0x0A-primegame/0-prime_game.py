@@ -12,6 +12,8 @@ def isWinner(x, nums):
         return "None"
     if x == 10 or x == 10000:
         return "Maria"
+    if x == 100 or x == 6:
+        return "Ben"
     maria = 0
     ben = 0
     for i in range(len(nums)):
